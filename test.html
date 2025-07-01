@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>تجربة فيسبوك تسجيل الدخول</title>
+</head>
+<body>
+  <button onclick="fbLogin()">تسجيل دخول فيسبوك</button>
+  <pre id="status"></pre>
+
+  <script>
+    const APP_ID = '1013619637256210';
+
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : APP_ID,
+        cookie     : true,
+        xfbml      : false,
+        version    : 'v17.0'
+      });
+    };
+
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "https://connect.facebook.net/ar_AR/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+
+    function fbLogin() {
+      FB.login(function(response) {
+        if (response.authResponse) {
+          document.getElementById('status').textContent = 'تم تسجيل الدخول\n\n' + JSON.stringify(response.authResponse, null, 2);
+        } else {
+          document.getElementById('status').textContent = 'لم يتم تسجيل الدخول أو رفضت الصلاحيات.';
+        }
+      }, {scope: 'pages_show_list'});
+    }
+  </script>
+</body>
+</html>
