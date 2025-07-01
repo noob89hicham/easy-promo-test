@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>اختبار زر Save</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    button {
+      background-color: #1877f2;
+      border: none;
+      color: white;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:disabled {
+      background-color: #aaa;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+
+<h1>اختبار زر Save</h1>
+
+<label for="inputField">أدخل نصًا:</label><br />
+<input type="text" id="inputField" placeholder="اكتب هنا..." style="width:300px; padding:8px; margin-top:10px;" />
+
+<br /><br />
+
+<button id="saveBtn" disabled>حفظ</button>
+
+<p id="message" style="margin-top:20px;"></p>
+
+<script>
+  const input = document.getElementById('inputField');
+  const saveBtn = document.getElementById('saveBtn');
+  const message = document.getElementById('message');
+
+  // تفعيل زر الحفظ فقط إذا كان هناك نص في الحقل
+  input.addEventListener('input', () => {
+    saveBtn.disabled = input.value.trim() === '';
+  });
+
+  saveBtn.addEventListener('click', () => {
+    // هنا ممكن تضيف منطق الحفظ أو أي إجراء آخر
+    message.textContent = 'تم الحفظ بنجاح! النص هو: ' + input.value;
+  });
+</script>
+
+</body>
+</html>
