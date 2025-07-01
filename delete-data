@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تعليمات حذف البيانات - EasyPromo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 40px;
+      color: #333;
+      line-height: 1.8;
+    }
+    .container {
+      background-color: #fff;
+      border-radius: 8px;
+      max-width: 700px;
+      margin: auto;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    h1 {
+      color: #1b74e4;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 16px;
+    }
+    .email {
+      background: #eee;
+      padding: 10px;
+      border-radius: 6px;
+      font-weight: bold;
+      direction: ltr;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>🗑️ تعليمات حذف البيانات</h1>
+    <p>نحن نحترم خصوصيتك. إذا كنت قد سجّلت الدخول إلى تطبيق EasyPromo من خلال حسابك على فيسبوك وترغب في حذف بياناتك، يرجى اتباع التعليمات التالية:</p>
+
+    <p>يرجى إرسال بريد إلكتروني بعنوان <strong>"حذف البيانات"</strong> إلى العنوان التالي:</p>
+
+    <p class="email">hicham1houari@gmail.com</p>
+
+    <p>سنتعامل مع طلبك ونتأكد من حذف جميع بياناتك خلال مدة لا تتجاوز <strong>7 أيام عمل</strong>.</p>
+
+    <p>شكرًا لاستخدامك EasyPromo.</p>
+  </div>
+
+</body>
+</html>
